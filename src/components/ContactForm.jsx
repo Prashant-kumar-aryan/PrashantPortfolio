@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import "../assets/styles/ContactForm.css"; // Import your CSS file
 import toast, { Toaster } from "react-hot-toast";
 const ContactForm = () => {
+  console.log(process.env.PUBLIC_KEY);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,9 +29,14 @@ const ContactForm = () => {
     };
 
     emailjs
-      .send(process.env.SERVICE_KEY, process.env.TEMPLATE_KEY, templateParams, {
-        publicKey: process.env.PUBLIC_KEY,
-      })
+      .send(
+        process.env.REACT_APP_SERVICE_KEY,
+        process.env.REACT_APP_TEMPLATE_KEY,
+        templateParams,
+        {
+          publicKey: process.env.REACT_APP_PUBLIC_KEY,
+        }
+      )
       .then(
         (response) => {
           toast.success("Message Sent");
