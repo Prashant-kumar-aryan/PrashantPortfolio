@@ -28,8 +28,8 @@ const ContactForm = () => {
     };
 
     emailjs
-      .send("service_9fsl0h8", "template_j575jx5", templateParams, {
-        publicKey: "5z0lNZnJfdFvWsX6C",
+      .send(process.env.SERVICE_KEY, process.env.TEMPLATE_KEY, templateParams, {
+        publicKey: process.env.PUBLIC_KEY,
       })
       .then(
         (response) => {

@@ -1,4 +1,4 @@
-import React, { section } from "react";
+import React from "react";
 import project from "../assets/images/project.png";
 import coding from "../assets/images/coding.png";
 import "../assets/styles/Projects.css";
@@ -28,8 +28,8 @@ const Projects = () => {
           <h1>Projects</h1>
           <h2>
             My projects makes use of vast variety of latest technology tools. My
-            best experience is web applications using MERN STACK and deploy them
-            on github for open source use.
+            best experience is in web applications using MERN STACK and deploy
+            them on github for open source use.
           </h2>
         </div>
       </section>
@@ -238,7 +238,6 @@ const Projects = () => {
           </div>
         </section>
       </section>
-
       <section>
         <section className="project-section">
           <div className="left-project-section">
@@ -250,9 +249,9 @@ const Projects = () => {
         </section>
       </section>
       <div className="coding-card">
-        <Leetcode />
         <GeeksforGeeks />
         <CodingNinja />
+        <Leetcode />
       </div>
       <a
         href="https://github.com/Prashant-kumar-aryan"
