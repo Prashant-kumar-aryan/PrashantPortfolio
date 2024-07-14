@@ -1,6 +1,9 @@
 body{
    background-color:#060417;
 }
+body::-webkit-scrollbar{
+   display: none;
+}
 *{
   scroll-behavior: smooth;
 }
